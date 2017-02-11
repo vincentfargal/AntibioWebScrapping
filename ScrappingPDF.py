@@ -21,11 +21,12 @@ import lxml
 # -------------------------------------------------------------------------------------------------------------------- #
 
 pdf = pdfquery.PDFQuery("liste_cip7_cip13_1.pdf")
+pdf = pdf.load(0)  # first page for trial, pdf.load() if want it all
+print(pdf)
 
-pdf.load()
-a = pdf.tree.write("/tmp/yadda", pretty_print=True)
+text = pdf.pq('LTPage[page_index=0] :in_bbox("100,100,300,300")').text()
 
-print(a)
+# print(text)
 
 
 # -------------------------------------------------------------------------------------------------------------------- #

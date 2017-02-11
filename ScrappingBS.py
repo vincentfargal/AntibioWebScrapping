@@ -11,7 +11,6 @@ import urllib.request
 from bs4 import BeautifulSoup
 import re
 import pandas
-import lxml
 
 # -------------------------------------------------------------------------------------------------------------------- #
 # Import list of CIPs to loop over
